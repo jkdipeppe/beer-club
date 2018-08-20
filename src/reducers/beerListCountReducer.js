@@ -4,7 +4,7 @@ export default function beerListCountReducer(state = {
   switch(action.type) {
 
     case 'INCREASE_COUNT':
-      return Object.assign({}, state, { beers: state.beers + 1});
+      return Object.assign({}, state, { beers: state.beers.push()});
     case 'DECREASE_COUNT':
       return Object.assign({}, state, { beers: state.beers - 1});
 
