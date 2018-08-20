@@ -72,7 +72,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    items: state.items
+    items: state.items //giving our component access to state.items through props.items (the key)
   }
 }
 

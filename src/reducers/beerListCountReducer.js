@@ -4,9 +4,9 @@ export default function beerListCountReducer(state = {
   switch(action.type) {
 
     case 'INCREASE_COUNT':
-      return state.beers.concat(state.beers.length + 1);
+      return Object.assign({}, state, { beers: state.beers + 1});
     case 'DECREASE_COUNT':
-      return state.beers.concat(state.beers.length - 1);
+      return Object.assign({}, state, { beers: state.beers - 1});
 
     default:
       return state;
